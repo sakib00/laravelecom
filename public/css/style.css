@@ -1,0 +1,162 @@
+/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .tabs {
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+    #tab-button {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    #tab-button li {
+      display: table-cell;
+      width: 20%;
+    }
+    #tab-button li a {
+      display: block;
+      padding: .5em;
+      background: #eee;
+      border: 1px solid #ddd;
+      text-align: center;
+      color: #000;
+      text-decoration: none;
+    }
+    #tab-button li:not(:first-child) a {
+      border-left: none;
+    }
+    #tab-button li a:hover,
+    #tab-button .is-active a {
+      border-bottom-color: transparent;
+      background: #337ab7;
+      color: #fff;
+    }
+    .tab-contents {
+      padding: .5em 2em 1em;
+      border: 1px solid #ddd;
+    }
+    .tab-button-outer {
+      display: none;
+    }
+    .tab-contents {
+      margin-top: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      .tab-button-outer {
+        position: relative;
+        z-index: 2;
+        display: block;
+      }
+      .tab-select-outer {
+        display: none;
+      }
+      .tab-contents {
+        position: relative;
+        top: -1px;
+        margin-top: 0;
+      }
+    }
+    /*@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);*/
+
+    fieldset, label { margin: 0; padding: 0; }
+
+    /****** Style Star Rating Widget *****/
+
+    .rating { 
+      border: none;
+      float: left;
+    }
+
+    .rating > input { display: none; } 
+    .rating > label:before { 
+      margin: 5px;
+      font-size: 1.25em;
+      font-family: FontAwesome;
+      display: inline-block;
+      content: "\f005";
+    }
+
+    .rating > .half:before { 
+      content: "\f089";
+      position: absolute;
+    }
+
+    .rating > label { 
+      color: #ddd; 
+     float: right; 
+    }
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+#commentform label {
+    /*width: 120px;*/
+    display: block;
+}
+#review_form #respond textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"] {
+    color: #666;
+    border: 1px solid #ccc;
+    height: 36px;
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+/* these styles are for the demo, but are not required for the plugin */
+    .zoom {
+      display:inline-block;
+      position: relative;
+    }
+    
+    /* magnifying glass icon */
+    .zoom:after {
+      content:'';
+      display:block; 
+      width:33px; 
+      height:33px; 
+      position:absolute; 
+      top:0;
+      right:0;
+      background:url(icon.png);
+    }
+
+    .zoom img {
+      display: block;
+    }
+
+    .zoom img::selection { background-color: transparent; }
+
+    .checkoutForm, .customerLogin{
+      margin: 20px 0px;
+      border: 2px solid #eee;
+      border-radius: 5px;
+      padding: 10px;
+    }
