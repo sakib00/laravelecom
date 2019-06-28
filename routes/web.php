@@ -67,4 +67,9 @@ Route::group(['middleware' => 'admin', 'namespace' => 'Admin'], function () {
     Route::post('/postAdminLogin', 'LoginController@postAdminLogin'); 
     Route::get('/admin/logout', 'LoginController@logout');        
     Route::get('/admin/dashboard', 'DashboardController@index');
+
+    
+    // Products CRUD routes
+    Route::get('/admin/products', 'ProductController@index');	
+	Route::get('/admin/product/create', 'ProductController@create');
 });
